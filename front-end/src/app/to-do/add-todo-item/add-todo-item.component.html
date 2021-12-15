@@ -1,0 +1,13 @@
+<form [formGroup]="addTodoForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col-9">
+            <textarea formControlName="task" [ngClass]="{ 'is-invalid': submitted && f['task'].errors }" class="form-control" rows="3" placeholder="New Task..."></textarea>
+            <div *ngIf="submitted && f['task'].errors" class="invalid-feedback">
+                The task detail is required
+              </div>
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-warning h-100 w-100">Add Task</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,14 @@
+<h3>To Do List</h3>
+
+<app-add-todo-item (add)="handleAdd($event)">
+</app-add-todo-item>
+
+<ul class="list-group pt-4">
+  <app-todo-item *ngFor="let todo of todoList"
+      [todo]="todo"
+      (remove)="handleRemove($event)"
+      (completeChange)="handleCompleteChange($event)">
+  </app-todo-item>
+</ul>
+
+<app-confirm-dialog></app-confirm-dialog>

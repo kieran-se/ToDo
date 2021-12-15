@@ -1,0 +1,7 @@
+<li [id]="todo.id" class="list-group-item d-flex justify-content-between">
+    <input class="form-check-input m-0 mt-3" type="checkbox" [checked]="todo.complete" (change)="onCompleteChange($event)" aria-label="complete">
+    <p class="flex-grow-1 px-4 m-0 mt-2 text-start">{{ todo.task }}</p>
+    <button type="button" class="btn btn-light" (click)="onRemove()">
+        Remove
+    </button>
+</li>
